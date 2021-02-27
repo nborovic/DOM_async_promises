@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, paper, scissors</title>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/rock-paper-scissors.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__menu-button" onclick="menuClickHandler()">
+        <img
+          class="header__menu-icon"
+          src="../assets/icons/menu.svg"
+          alt="Menu"
+        />
+      </button>
+    </header>
+    <section class="sidebar sidebar--closed">
+      <div>
+        <button class="sidebar__menu-button" onclick="menuClickHandler()">
+          <img
+            class="sidebar__menu-icon"
+            src="../assets/icons/menu.svg"
+            alt="Menu"
+          />
+        </button>
+      </div>
+
+      <form
+        class="sidebar__form"
+        action="javascript:void(0)"
+        onsubmit="handleSettingsFormSubmit(this)"
+      >
+        <div class="sidebar__field">
+          <label class="sidebar__label" for="player-name">Player name:</label>
+          <input
+            class="sidebar__input"
+            name="player-name"
+            type="text"
+            placeholder="Player name"
+          />
+        </div>
+        <div class="sidebar__field">
+          <label class="sidebar__label" for="background-color"
+            >Background color:</label
+          >
+          <input
+            class="sidebar__input"
+            name="background-color"
+            type="text"
+            placeholder="Background color"
+          />
+        </div>
+        <button class="sidebar__button" type="submit">Set</button>
+        <button class="sidebar__button" onclick="resetSettings()">Reset</button>
+      </form>
+    </section>
+    <main class="game">
+      <div class="game__info">
+        <h1 class="info__title">Rock, paper, scissors</h1>
+      </div>
+      <div class="game__leaderboard">
+        <div class="leaderboard__player">
+          <div class="leaderboard__name">HUMAN</div>
+          <div class="leaderboard__score">0</div>
+        </div>
+        <div class="leaderboard__player">
+          <div class="leaderboard__name">COMPUTER</div>
+          <div class="leaderboard__score">0</div>
+        </div>
+      </div>
+      <div class="game__options">
+        <button class="options__button" onclick="{}">
+          <img
+            class="options__image"
+            src="../assets/images/rock.png"
+            alt="Rock"
+						onclick="handleOptionClick('ROCK')"
+          />
+        </button>
+        <button class="options__button">
+          <img
+            class="options__image"
+            src="../assets/images/paper.png"
+            alt="Paper"
+						onclick="handleOptionClick('PAPER')"
+          />
+        </button>
+        <button class="options__button">
+          <img
+            class="options__image"
+            src="../assets/images/scissors.png"
+            alt="Scissors"
+						onclick="handleOptionClick('SCISSORS')"
+          />
+        </button>
+      </div>
+    </main>
+    <script src="../scripts/constants/optionEnum.js"></script>
+    <script src="../scripts/constants/playerTypeEnum.js"></script>
+    <script src="../scripts/utils/random.js"></script>
+    <script src="../scripts/game.js"></script>
+		<script src="../scripts/settings.js""></script>
+		<script src="../scripts/eventListeners.js"></script>
+  </body>
+</html>

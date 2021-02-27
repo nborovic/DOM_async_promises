@@ -1,0 +1,127 @@
+.header {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__menu-button,
+.sidebar__menu-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header__menu-icon,
+.sidebar__menu-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  padding: 5px;
+  position: absolute;
+  background: #fff;
+  box-shadow: 5px 5px 5px 5px #000000;
+  top: 0;
+  right: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.sidebar--closed {
+  transform: translate(300px);
+}
+
+.sidebar--open {
+  transform: translateX(0);
+}
+
+.sidebar__field {
+  margin-top: 20px;
+}
+
+.sidebar__label {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sidebar__input {
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+.sidebar__button {
+  font-size: 20px;
+  margin: 20px 10px 0 0;
+  cursor: pointer;
+}
+
+.game {
+  width: 550px;
+  margin: auto;
+}
+
+.info__title {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.game__leaderboard {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaderboard__name {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.leaderboard__score {
+  font-size: 50px;
+  text-align: center;
+}
+
+.game__options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options__button {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.options__image {
+  width: 100%;
+  height: 100%;
+}
+
+.options__button:hover {
+  transform: scale(1.15);
+}
+
+.game__message {
+  color: #fff;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.game__message--green {
+  background: green;
+}
+
+.game__message--red {
+  background: red;
+}
+
+.game__message--grey {
+  background: grey;
+}
