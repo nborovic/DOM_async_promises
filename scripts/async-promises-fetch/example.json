@@ -1,0 +1,10 @@
+{
+  "parentProperty1": {
+    "childProperty1": "value",
+    "childProperty2": ["value1", "value2", "value3"]
+  },
+  "parentProperty2": {
+    "childProperty1": "value",
+    "childProperty2": ["value1", "value2", "value3"]
+  }
+}

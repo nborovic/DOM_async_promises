@@ -1,27 +1,8 @@
 const state = {
   humanCounter: 0,
   computerCounter: 0,
-  playing: true,
+  isPlaying: true,
 };
-
-function setSettings() {
-  const playerNameValue = localStorage.getItem("player-name");
-  const backgroundColorValue = localStorage.getItem("background-color");
-
-  const player = document.querySelector(".leaderboard__name");
-  const body = document.body;
-
-  player.innerHTML = playerNameValue;
-  body.style.background = backgroundColorValue;
-
-  const playerNameInput = document.querySelector("input[name='player-name']");
-  const backgroundColorInput = document.querySelector(
-    "input[name='background-color']"
-  );
-
-  playerNameInput.value = playerNameValue;
-  backgroundColorInput.value = backgroundColorValue;
-}
 
 function determineWinner(humanOption, computerOption) {
   switch (humanOption) {
@@ -72,9 +53,9 @@ function addWin(playerType) {
 }
 
 function getMessageElement(message, className) {
-  return (messageElement = `
+  return `
 		<div class="game__message ${className}">${message}</div>
-	`);
+	`;
 }
 
 function getRandomOption() {
@@ -88,7 +69,7 @@ function handleOptionClick(humanOption) {
 
 function addKeyPressEventListener() {
   window.addEventListener("keypress", (event) => {
-    if (!state.playing) return;
+    if (!state.isPlaying) return;
 
     const computerOption = getRandomOption();
     let humanOption = null;
